@@ -1,0 +1,68 @@
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   background-color: ghostwhite;
+}
+header{
+   display: grid;
+}
+.header{
+   justify-self: center;
+   font-size: 24px;
+   margin-top: 10px;
+}
+header>.sub-header{
+   justify-self: center;
+}
+nav{
+   margin-top: 10px;
+   background-color: khaki;
+   border-color: khaki;
+   padding: 10px 10px 10px 10px;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.navbar{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-gap: 5px;
+}
+.btn-navbar{
+   padding: 5px;
+   border: none;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.btn-navbar:hover{
+   background-color: blue;
+   color: white;
+   border: none;
+}
+main{
+   display: grid;
+   margin-top: 10px;
+}
+.tbl-beli{
+   max-width: 40rem;
+   justify-self: center;
+   table-layout: auto;
+   border-collapse: collapse;
+}
+.tbl-beli td,th{
+   border: 1px solid;
+   padding: 4px;
+}
+footer{
+   background-color: gray;
+   color: white;
+   text-align: center;
+   padding: 20px;
+   margin-top: auto;
+}
