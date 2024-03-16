@@ -1,5 +1,9 @@
 form{
-   display: grid;
+   display: flex;
+   flex-direction: column;
+   max-width: 70%;
+   margin-left: 20%;
+   margin-right: 20%;
 }
 form select{
    padding: 5px;

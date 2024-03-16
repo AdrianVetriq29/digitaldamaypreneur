@@ -2,7 +2,18 @@ body{
    display: flex;
    flex-direction: column;
    min-height: 100vh;
-   background-color: ghostwhite;
+   background-color:khaki;
+}
+.bg-logo{
+   background-color: rgb(149, 177, 47);
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+}
+.bg-logo > .logo-disdik,.logo-kcd,.logo-smk,.logo-spw{
+   height: 60px;
+   justify-self: center;
+   padding: 1px;
+   box-shadow: white;
 }
 header{
    display: grid;
@@ -59,10 +70,27 @@ main{
    border: 1px solid;
    padding: 4px;
 }
+.btn-tambah-omset{
+   background-color: aqua;
+   border: none;
+   border-radius: 10px;
+   margin: 1px;
+}
 footer{
    background-color: gray;
    color: white;
    text-align: center;
    padding: 20px;
    margin-top: auto;
+}
+
+main form{
+   margin-bottom: 5px;
+   justify-self: center;
+}
+
+main form .txt-search,.btn-search{
+   padding: 5px;
+   border-radius: 5px;
+   border: none;
 }
