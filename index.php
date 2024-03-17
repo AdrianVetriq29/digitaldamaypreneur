@@ -52,6 +52,7 @@ if(isset($_POST["search"])){
          <input type="text" name="keyword" id="" class="txt-search" autofocus>
          <button name="search" class="btn-search">Cari!</button>
       </form>
+      <div class="overflow-x-scroll">
       <table class="tbl-beli">
          <tr>
             <th>No.</th>
@@ -105,6 +106,7 @@ if(isset($_POST["search"])){
             <?php $i++; ?>
          <?php endforeach ?>
       </table>
+      </div>
    </main>
    <footer>
       <div class="text-footer">&copy 2024</div>
