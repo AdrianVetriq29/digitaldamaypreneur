@@ -39,7 +39,7 @@ nav{
 }
 .navbar{
    display: grid;
-   grid-template-columns: repeat(3,1fr);
+   grid-template-columns: repeat(4,1fr);
    grid-gap: 5px;
 }
 .btn-navbar{
@@ -52,9 +52,12 @@ nav{
    -o-border-radius: 10px;
 }
 .btn-navbar:hover{
-   background-color: blue;
+   background-color: rgb(149, 177, 47);
    color: white;
    border: none;
+}
+.active{
+   text-decoration: underline ;
 }
 main{
    display: grid;

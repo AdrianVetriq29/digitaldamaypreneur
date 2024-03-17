@@ -44,6 +44,7 @@ if (isset($_POST["submit"])) {
    <nav>
       <div class="navbar">
          <button class="btn-navbar" onclick="window.location.href='index.php'">Beranda</button>
+         <button class="btn-navbar active" onclick="window.location.href='input.php'">Pengambilan</button>
          <button class="btn-navbar">Setoran</button>
          <?php if(!isset($_SESSION["login"])) : ?>
          <button class="btn-navbar"  onclick="window.location.href='login.php'">Login</button>

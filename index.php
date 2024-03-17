@@ -3,6 +3,10 @@ session_start();
 require "functions.php";
 
 $dataPengambilan = query("SELECT * FROM pengambilan ");
+$dataCoach = query("SELECT * FROM coach");
+$dataKapten = query("SELECT * FROM kapten");
+$dataDanru = query("SELECT * FROM danru");
+$dataSiswa = query("SELECT * FROM siswa");
 if(isset($_POST["search"])){
    $dataPengambilan = search($_POST["keyword"]);
 }
@@ -33,6 +37,7 @@ if(isset($_POST["search"])){
    </header>
    <nav>
       <div class="navbar">
+         <button class="btn-navbar active " onclick="window.location.href='index.php'">Beranda</button>
          <button class="btn-navbar" onclick="window.location.href='input.php'">Pengambilan</button>
          <button class="btn-navbar">Setoran</button>
          <?php if (!isset ($_SESSION["login"])): ?>
@@ -63,12 +68,21 @@ if(isset($_POST["search"])){
          <?php $i = 1; ?>
          <?php foreach ($dataPengambilan as $row): ?>
             <tr>
+               <?php 
+                  $dataSiswa = query("SELECT id_coach,id_kapten,id_danru FROM siswa WHERE nama_siswa LIKE '$row[nama_siswa]'")[0]; 
+               ?>
                <td>
                   <?= $i; ?>.
                </td>
-               <td></td>
-               <td></td>
-               <td></td>
+               <td>
+                  <?= $dataCoach[$dataSiswa['id_coach']-1]['nama_coach'] ?>
+               </td>
+               <td>
+                  <?= $dataKapten[$dataSiswa['id_kapten']-1]['nama_kapten'] ?>
+               </td>
+               <td>
+                  <?= $dataDanru[$dataSiswa['id_danru']-1]['nama_danru'] ?>
+               </td>
                <td>
                   <?= $row["nama_siswa"] ?>
                </td>
@@ -81,7 +95,11 @@ if(isset($_POST["search"])){
                <td>
                   <?= $row["modal"] ?>
                </td>
-               <td>-</td>
+               <td>
+                  <button class="btn-add-omset">
+                     Tambah
+                  </button>
+               </td>
                <td>-</td>
             </tr>
             <?php $i++; ?>
