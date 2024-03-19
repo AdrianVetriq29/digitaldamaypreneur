@@ -14,8 +14,8 @@ body{
 .bg-logo > .logo-disdik,.logo-kcd,.logo-smk,.logo-spw{
    height: 60px;
    justify-self: center;
-   padding: 1px;
-   box-shadow: white;
+   margin-top: 5px;
+   margin-bottom: 5px;
 }
 header{
    display: grid;
@@ -59,11 +59,16 @@ nav{
    border: none;
 }
 .active{
-   text-decoration: underline ;
+   color: rgb(149, 177, 47);
+   font-weight: bold;
 }
 main{
    display: grid;
    margin-top: 10px;
+   margin-left: 10px;
+}
+.justify-self-center{
+   justify-self: center;
 }
 .overflow-x-scroll{
    overflow-x: auto;
@@ -75,8 +80,15 @@ main{
    border-collapse: collapse;
 }
 .tbl-beli td,th{
+   min-width: auto;
    border: 1px solid;
    padding: 4px;
+}
+.camel-case{
+   text-transform: capitalize;
+}
+.nowrap{
+   white-space: nowrap;
 }
 .btn-tambah-omset{
    background-color: aqua;
@@ -94,7 +106,6 @@ footer{
 
 main form{
    margin-bottom: 5px;
-   justify-self: center;
 }
 
 main form .txt-search,.btn-search{
