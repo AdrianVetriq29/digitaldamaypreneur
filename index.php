@@ -49,7 +49,7 @@ if(isset($_POST["search"])){
    </nav>
    <main>
       <form action="" method="post">
-         <input type="text" name="keyword" id="" class="txt-search" autofocus>
+         <input type="text" name="keyword" id="" class="txt-search" placeholder="Masukan nama siswa" autofocus>
          <button name="search" class="btn-search">Cari!</button>
       </form>
       <div class="overflow-x-scroll">
@@ -62,7 +62,7 @@ if(isset($_POST["search"])){
             <th>Nama Siswa</th>
             <th>Tanggal</th>
             <th>Nama Produk/Jasa</th>
-            <th>modal</th>
+            <th>Modal</th>
             <th>Omset</th>
             <th>profit</th>
          </tr>
@@ -75,6 +75,7 @@ if(isset($_POST["search"])){
                <td>
                   <?= $i; ?>.
                </td>
+<<<<<<< HEAD
                <td>
                   <?= $dataCoach[$dataSiswa['id_coach']-1]['nama_coach'] ?>
                </td>
@@ -85,9 +86,21 @@ if(isset($_POST["search"])){
                   <?= $dataDanru[$dataSiswa['id_danru']-1]['nama_danru'] ?>
                </td>
                <td>
+=======
+               <td class="camel-case">
+                  <?= $dataCoach[$dataSiswa['id_coach']-1]['nama_coach'] ?>
+               </td>
+               <td class="camel-case">
+                  <?= $dataKapten[$dataSiswa['id_kapten']-1]['nama_kapten'] ?>
+               </td>
+               <td class="camel-case">
+                  <?= $dataDanru[$dataSiswa['id_danru']-1]['nama_danru'] ?>
+               </td>
+               <td class="camel-case">
+>>>>>>> b89c08cd7d64e2412fcfea016105409f00a13b02
                   <?= $row["nama_siswa"] ?>
                </td>
-               <td>
+               <td class="nowrap">
                   <?= $row["tanggal"] ?>
                </td>
                <td>
